@@ -86,11 +86,12 @@ input[type="text"] {
     
 }
 .campo2 {
-    width: 100%;
+    width: 60%;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid var(--gray-400);
 }
 
 #linha{
@@ -99,10 +100,12 @@ input[type="text"] {
     width: 50%;
     justify-content: space-between;
     align-items: flex-start;
+    
 }
 #linhona {
     display: flex;
     gap: 10px;
+    
 }
 
 h3{
