@@ -85,7 +85,7 @@ input[type="text"] {
     border-radius: 5px;
     
 }
-.campo2 {
+#campo2 {
     width: 60%;
     height: 200px;
     display: flex;
@@ -132,4 +132,10 @@ span{
 
 h2,h4{
     color:var(--gray-300);
+}
+
+.itens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
