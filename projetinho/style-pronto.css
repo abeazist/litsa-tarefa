@@ -117,16 +117,25 @@ span{
     border-radius: 999px 0px 0px 0px;
     background-color: var(--gray-400);
     border-radius: 1500px;
-    color:var(--gray-200)
-    
-}
-#criadas{
-    color: var(--blue);
-}
-#concluidas{
-    color: var(--purple);
+    color:var(--gray-200);  
 }
 
-h2,h4{
-    color:var(--gray-300);
+#tarefas{
+    border: 2px solid var(--gray-400);
+    background-color: var(--gray-500);
+    color: var(--gray-100);
+}
+
+.tarefas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+#button-lixeira{
+    background-color: var(--gray-600);
 }
