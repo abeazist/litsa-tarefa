@@ -1,26 +1,36 @@
-const task = document.getElementById('task').value;
+const task = document.getElementById('task');
 const criar = document.getElementById('botao');
 const campo2 = document.getElementById("campo2");
 const itens = document.getElementById('itens');
-const criadas = document.getElementById('criadas');
-const concluidas = document.getAnimations('concluidas');
+const criadas = document.querySelector('[criadas]');
+const concluidas = document.getElementById('concluidas');
+let tarefasCriadas = 0;
+
 
 
 criar.addEventListener('click',() =>{
     itens.style.display='none';
-    const exer = document.createElement("input");
-    exer.type='checkbox';
-    exer.innerHTML = task.value
-    campo2.appendChild(exer);
+    const lista = document.createElement("li")
+    lista.className="lista"
+    lista.innerHTML = `
+    <input type="checkbox" id="Atividades" >
+    <span>
+        ${task.value}
+    </span>`
+    task.value=""
+    campo2.appendChild(lista);
     contarTarefa();
-
-
 })
 
+concluidas.addEventListener('change',() =>{
+    
+})
+
+
+
 function contarTarefa(){
-    criadas = 0
-    for (let i = 0; i < criadas; i++) {
-         criadas+=1
-         innerHTML= criadas.value
+        tarefasCriadas+=1
+        criadas.innerHTML=tarefasCriadas //capturei o criadas do html e atribui a variavel
         
-    }}
+    
+}
