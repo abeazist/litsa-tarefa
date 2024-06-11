@@ -34,3 +34,17 @@ function contarTarefa(){
         
     
 }
+
+function concluir(){
+    if (condition) {
+       
+        tarefasCriadas-=1
+        criadas.innerHTML=tarefasCriadas
+    }
+
+function apagarTarefas{
+    
+}
+
+
+}
