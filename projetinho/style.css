@@ -143,5 +143,13 @@ h2,h4{
 }
 
 li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+}
+
+
+i{
+    cursor: pointer;
 }
