@@ -22,7 +22,12 @@ criar.addEventListener('click',() =>{
     contarTarefa();
 })
 
-concluidas.addEventListener('change',() =>{
+concluidas.addEventListener('onchange',() =>{
+    if (concluidas=='True') {
+       
+        tarefasCriadas-=1
+        criadas.innerHTML=tarefasCriadas
+    }
     
 })
 
@@ -35,16 +40,9 @@ function contarTarefa(){
     
 }
 
-function concluir(){
-    if (condition) {
-       
-        tarefasCriadas-=1
-        criadas.innerHTML=tarefasCriadas
-    }
 
 function apagarTarefas{
     
 }
 
 
-}
