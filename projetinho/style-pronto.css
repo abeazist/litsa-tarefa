@@ -146,3 +146,8 @@ li{
     padding: 3px;
     margin-bottom: 5px;
 }
+
+.concluido {
+    text-decoration: double;
+    color: red;
+}

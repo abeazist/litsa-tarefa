@@ -16,9 +16,11 @@ criar.addEventListener('click',() =>{
     itens.style.display='none';
     const lista = document.createElement("li")
     lista.className="lista"
+
+
     lista.innerHTML = `
-    <input type="checkbox" id="Atividades" >
-    <span>
+    <input type="checkbox" check id="Atividades" >
+    <span class="descricao">
         ${task.value}
         <i onclick="apagarTarefas()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M14.2021 9.98547H12.8716V15.5073H14.2021V9.98547Z" fill="#808080"/>
@@ -28,22 +30,53 @@ criar.addEventListener('click',() =>{
         </i>
     </span>`
     task.value=""
+
+    const checkbox = lista.querySelector("[type=checkbox]")
+    checkbox.addEventListener("click", verificaConclusaoTarefa)
+
     campo2.appendChild(lista);
     contarTarefa();
 })
 
-concluir.addEventListener('onchange',() =>{
-    if (concluidas.onchange === True) {
-        tarefasConcluidas+=1
+
+function atualizarTela(){
+    criadas.innerText = tarefasCriadas
+    concluidas.innerText = tarefasConcluidas
+
+
+}
+//comentar oq eu fiz
+function verificaConclusaoTarefa(e) {
+    const checkbox = e.target
+    const item = checkbox.parentNode
+    const span = item.querySelector("span")
+    if (checkbox.checked){
+        span.classList.add("concluido")
+        tarefasConcluidas += 1
         concluidas.innerHTML=tarefasConcluidas,'de',tarefasCriadas
+    }
+    else{
+        span.classList.remove("concluido")
+        tarefasConcluidas -= 1
+    }
+    atualizarTela()
 
-    }})
+
+   
+    
+}
 
 
+    if (concluidas.checked) {
+        tarefasConcluidas+=1
+       
+        tarefasCriadas-=1
+        criadas.innerHTML=tarefasCriadas
+    }
 
 function contarTarefa(){
         tarefasCriadas+=1
-        criadas.innerHTML=tarefasCriadas //capturei o criadas do html e atribui a variavel
+        atualizarTela()
 }
 
 function apagarTarefas(){
