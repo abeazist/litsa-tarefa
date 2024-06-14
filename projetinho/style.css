@@ -74,6 +74,7 @@ input[type="text"] {
     border: 2px solid var(--gray-700);
     border-radius: 5px;
     font-size: 16px;
+    
 }
 
 .input-container{
@@ -90,6 +91,7 @@ input[type="text"] {
     height: 200px;
     flex-direction: column;
     padding: 10px;
+    gap: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,11 +117,8 @@ h3{
 }
 
 span{
-    width: Hug (25px)px;
-    height: Hug (19px)px;
     padding: 2px 8px 2px 8px;
     gap: 10px;
-    border-radius: 999px 0px 0px 0px;
     background-color: var(--gray-400);
     border-radius: 1500px;
     color:var(--gray-200)
@@ -144,17 +143,34 @@ h2,h4{
 
 li{
     display: flex;
-    justify-content: center;
-    align-items: center;
     list-style: none;
+
 }
 
 
 i{
     cursor: pointer;
+
 }
 
 .concluido {
     text-decoration:line-through;
     
 }
+#concluir{
+    color: var(--purple);
+}
+
+.descricao{
+    display: flex;
+    background-color: var(--gray-500);
+    justify-content: flex-start;
+    align-items: center;
+    width: 736px;
+    height: 72px;
+    border: var(--gray-400);
+    border-radius: 10px;
+    padding: 3px;
+    gap: 3px;
+}
+

@@ -111,7 +111,7 @@ h3{
     color: var(--blue) ;
 }
 
-span{
+#spanNumero{
     width: Hug (25px)px;
     height: Hug (19px)px;
     padding: 2px 8px 2px 8px;
@@ -135,6 +135,7 @@ span{
 
 #button-lixeira{
     background-color: var(--gray-600);
+
 }
 
 li{
@@ -142,12 +143,8 @@ li{
 }
 
 
-.lista{
-    padding: 3px;
-    margin-bottom: 5px;
-}
-
 .concluido {
     text-decoration: double;
-    color: red;
+    color:var(--gray-500);
 }
+

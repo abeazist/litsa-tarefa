@@ -82,6 +82,7 @@ function apagarTarefas(){
     const listaItem = event.target.closest('li');
     if (listaItem) {
         listaItem.remove()
+        tarefasConcluidas-=1
         
     }
 }
