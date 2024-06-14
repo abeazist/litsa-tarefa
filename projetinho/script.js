@@ -9,8 +9,15 @@ const lista = document.getElementById("lista");
 
 let tarefasCriadas = 0;
 let tarefasConcluidas= 0;
+let listaTarefas=[]
 
+function criandoArmazenamento(){
+    localStorage.setItem('tarefas',JSON.stringify(listaTarefas))
+}
 
+function lendoArmazenamento(){
+    
+}
 
 criar.addEventListener('click',() =>{
     itens.style.display='none';
@@ -36,6 +43,8 @@ criar.addEventListener('click',() =>{
 
     campo2.appendChild(lista);
     contarTarefa();
+
+    
 })
 
 
@@ -60,19 +69,7 @@ function verificaConclusaoTarefa(e) {
         tarefasConcluidas -= 1
     }
     atualizarTela()
-
-
-   
-    
 }
-
-
-    if (concluidas.checked) {
-        tarefasConcluidas+=1
-       
-        tarefasCriadas-=1
-        criadas.innerHTML=tarefasCriadas
-    }
 
 function contarTarefa(){
         tarefasCriadas+=1
@@ -88,6 +85,8 @@ function apagarTarefas(){
         
     }
 }
+
+
     
 
 
