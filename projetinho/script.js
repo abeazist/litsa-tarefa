@@ -15,10 +15,16 @@ function criandoArmazenamento(){
     localStorage.setItem('tarefas',JSON.stringify(listaTarefas))
 }
 
-function lendoArmazenamento(){
+function adicionadoLista(){
     
 }
+function lendoArmazenamento(){
+    const itens = JSON.parse(localStorage.getItem('itens'))
+    console.log(itens)
+}
 
+
+lendoArmazenamento()
 criar.addEventListener('click',() =>{
     itens.style.display='none';
     const lista = document.createElement("li")
