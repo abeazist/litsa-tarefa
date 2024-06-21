@@ -140,7 +140,7 @@ function apagarTarefas(){
     })
   
     // remover o tarefa da listaTarefas
-    
+    tarefa = 
     // Atualizar o localstorage
     criandoArmazenamento()
 
