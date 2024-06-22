@@ -120,6 +120,7 @@ function verificaConclusaoTarefa(e) {
         span.classList.remove("concluido")
         tarefasConcluidas -= 1
     }
+    
     atualizarTela()
 }
 
@@ -136,17 +137,24 @@ function apagarTarefas(){
 
     const nomeTarefa = listaItem.querySelector("span").innerText //selecionando o span dentro do li
     const index = listaTarefas.findIndex((item) => { //a funcao findindex chama a funcao item que é responsavel por comparar o valor que a findindex passou para ele, com os itens do objeto, span/itemDescricao, e vai retornar o false e o true, e passar para o find, no momento que ele encontrar oq ele quer ele vai retornar a decricao
-      return item.descricao == nomeTarefa
-    })
+        return item.descricao == nomeTarefa
+    });
+    
+    if (index!== -1) {
+        listaTarefas.splice(index, 1);
+        console.log(listaTarefas);
+        
+    }
   
     // remover o tarefa da listaTarefas
-    tarefa = 
+    
+    // nomeTarefa.remove()
+    // nomeTarefa.parentElement.removeChild(nomeTarefa)
     // Atualizar o localstorage
     criandoArmazenamento()
 
     if (listaItem) {
         listaItem.remove()
-        tarefasConcluidas-=1
-        
+        concluidas.innerHTML=0
     }
 }
